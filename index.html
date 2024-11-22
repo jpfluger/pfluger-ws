@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaret Pfluger | pfluger.ws</title>
+    <link href="/public/_third/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/_fonts/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(circle, #f5f7fa, #e9ecef);
+            color: #333;
+        }
+        header {
+            position: relative; /* Establish a positioning context for the ::before pseudo-element */
+            color: #fff;
+            padding: 60px 0;
+            border-bottom: 4px solid #ffc107;
+            text-align: center;
+        }
+
+        header::before {
+            content: "";
+            position: absolute; /* Positions the pseudo-element relative to the header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/public/denim-to-stretch.webp');
+            background-size: cover; /* Stretches the image */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating */
+            background-color: #343a40; /* Fallback color */
+            background-blend-mode: overlay; /* Mutes the background */
+            opacity: 0.9; /* Adjust transparency */
+            z-index: -1; /* Places the background behind the content */
+            border-bottom: 4px solid transparent; /* Ensures the border is not affected */
+        }
+        h3, h5 {
+            margin-bottom: 1.5rem; /* Adds space below headings */
+        }
+        /* Ensure consistent vertical spacing across sections */
+        section, footer {
+            margin-top: 3rem; /* Adjust as needed */
+            margin-bottom: 3rem; /* Adjust as needed */
+        }
+        hr {
+            margin-top: 2rem; /* Adds space above horizontal rules */
+            margin-bottom: 2rem; /* Adds space below horizontal rules */
+        }
+        .container {
+            max-width:725px;
+        }
+        .avatar img {
+            width: 111px;
+            height: 111px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .links, .social-icons {
+            margin-top: 1rem; /* Adds space between content and headings */
+            margin-bottom: 1rem; /* Ensures sections don’t look cramped */
+        }
+        .links a {
+            color: #ffc107;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        .related-websites {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; /* Ensures vertical alignment */
+            gap: 8px; /* Controls spacing */
+        }
+        .related-websites span {
+            display: inline-block;
+            vertical-align: middle; /* Aligns separators with the text */
+            margin: 0 4px; /* Adds space around the separator */
+        }
+        .related-websites a {
+            display: inline-flex;
+            align-items: center; /* Ensures icons align with text */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .related-websites a:hover {
+            color: #ffd700; /* Smooth hover effect */
+        }
+        @media (min-width: 768px) {
+            .related-websites span {
+                display: inline-block; /* Show the "|" separator on larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="text-center">
+    <div class="avatar mb-3">
+        <img src="/public/jp-curves-222w.webp" alt="" class="" width="120" height="120">
+    </div>
+    <h1 class="fw-bold">Jaret Pfluger</h1>
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-2">
+        <p class="mb-0 fw-medium">Enterprise Architect & Strategist</p>
+        <span class="d-none d-md-inline text-secondary">|</span>
+        <p class="mb-0 fw-medium">Certified in CGEIT, CISM, CIPT</p>
+    </div>
+    <hr class="mt-3 mb-3" style="max-width: 450px; margin: auto;">
+    <p class="mt-1 related-websites d-flex flex-wrap justify-content-center align-items-center gap-2">
+        <a href="https://einpost.com" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
+            <i class="bi bi-pencil me-1"></i>Einpost
+        </a>
+        <span class="text-secondary align-middle">|</span>
+        <a href="https://igorg.io" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
+            <i class="bi bi-globe me-1"></i>IGORG
+        </a>
+        <span class="text-secondary align-middle">|</span>
+        <a href="https://lovefeeders.org" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
+            <i class="bi bi-heart-fill me-1"></i>LoveFeeders
+        </a>
+        <span class="text-secondary align-middle">|</span>
+        <a href="https://tigsus.com" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
+            <i class="bi bi-briefcase me-1"></i>Tigsus
+        </a>
+    </p>
+</header>
+
+<section class="container text-center my-5">
+    <h3>About Me</h3>
+    <p>Hello! I’m Jaret Pfluger, the reporting hacker behind <a href="https://einpost.com" target="_blank" class="text-warning">Einpost</a>.</p>
+    <p>Some call me an author, a poet, even a bard. Some say I’m a saint; others, the devil himself. The truth is, I’m just a regular schlub trying to make sense of this world, one stumble at a time. Still, it would be nice to leave it better than I found it. For that, I’ll need a bit of wisdom.</p>
+</section>
+
+<section class="container text-center my-5">
+    <h5>Other Links</h5>
+    <div class="links">
+        <a href="https://amazon.com/author/jaretpfluger" target="_blank">Amazon Author Page</a> |
+        <a href="#" data-bs-toggle="modal" data-bs-target="#introNotesModal">Introduction Notes</a>
+    </div>
+</section>
+
+<footer class="container text-center my-5">
+    <h5>Connect with Me</h5>
+    <div class="d-flex justify-content-center social-icons">
+        <a href="https://github.com/jpfluger" target="_blank"><i class="bi bi-github"></i></a>
+        <!--        <a href="https://facebook.com/yourfacebookpage" target="_blank"><i class="bi bi-facebook"></i></a>-->
+        <a href="https://instagram.com/jaretpfluger" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@jaret.pfluger" target="_blank"><i class="bi bi-tiktok"></i></a>
+<!--        <a href="https://youtube.com/channel/yourchannelID" target="_blank"><i class="bi bi-youtube"></i></a>-->
+<!--        <a href="https://x.com/" target="_blank"><i class="bi bi-x-lg"></i></a>-->
+        <a href="mailto:postbox@einpost.com" class="email-icon"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+    <p class="text-muted mt-2">&copy; 2024 Jaret Pfluger. All rights reserved.</p>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="introNotesModal" tabindex="-1" aria-labelledby="introNotesModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="introNotesModalLabel">Introduction Notes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><span class="text-muted">(When in doubt, use this for general use in programs or guides.)</span></p>
+                <p>Jaret Pfluger is a seasoned IT consultant with over 25 years of experience in enterprise governance, architecture, cybersecurity, and full-stack development. He has worked with Fortune 500 companies and smaller organizations, primarily in the energy sector. His international career includes living and working in China, Ukraine, and Spain. Jaret now resides in the U.S.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/public/_third/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
