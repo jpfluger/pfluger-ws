@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Jaret Pfluger | pfluger.ws</title>
-    <link href="/public/_third/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/_fonts/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
     <link href="public/bootstrap.min.css" rel="stylesheet">
     <link href="public/bsicons/font.min.css" rel="stylesheet">
     <style>
@@ -14,7 +15,7 @@
             color: #333;
         }
         header {
-            position: relative; /* Establish a positioning context for the ::before pseudo-element */
+            position: relative;
             color: #fff;
             padding: 60px 0;
             border-bottom: 4px solid #ffc107;
@@ -23,35 +24,36 @@
 
         header::before {
             content: "";
-            position: absolute; /* Positions the pseudo-element relative to the header */
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-image: url('public/denim-to-stretch.webp');
-            background-size: cover; /* Stretches the image */
-            background-position: center; /* Centers the image */
-            background-repeat: no-repeat; /* Prevents repeating */
-            background-color: #343a40; /* Fallback color */
-            background-blend-mode: overlay; /* Mutes the background */
-            opacity: 0.9; /* Adjust transparency */
-            z-index: -1; /* Places the background behind the content */
-            border-bottom: 4px solid transparent; /* Ensures the border is not affected */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #343a40;
+            background-blend-mode: overlay;
+            opacity: 0.9;
+            z-index: -1;
+            border-bottom: 4px solid transparent;
         }
         h3, h5 {
-            margin-bottom: 1.5rem; /* Adds space below headings */
+            margin-bottom: 1.5rem;
+            font-family: 'Roboto Slab', Georgia, serif;
+            font-weight: bold;
         }
-        /* Ensure consistent vertical spacing across sections */
         section, footer {
-            margin-top: 3rem; /* Adjust as needed */
-            margin-bottom: 3rem; /* Adjust as needed */
+            margin-top: 3rem;
+            margin-bottom: 3rem;
         }
         hr {
-            margin-top: 2rem; /* Adds space above horizontal rules */
-            margin-bottom: 2rem; /* Adds space below horizontal rules */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
         .container {
-            max-width:725px;
+            max-width: 725px;
         }
         .avatar img {
             width: 111px;
@@ -60,44 +62,57 @@
             object-fit: cover;
         }
         .links, .social-icons {
-            margin-top: 1rem; /* Adds space between content and headings */
-            margin-bottom: 1rem; /* Ensures sections don’t look cramped */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
         .links a {
             color: #ffc107;
             text-decoration: none;
             margin: 0 10px;
         }
+        .links a:hover {
+            text-decoration: underline;
+        }
         .social-icons a {
             color: #333;
             font-size: 1.5rem;
             margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ffc107;
         }
         .related-websites {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center; /* Ensures vertical alignment */
-            gap: 8px; /* Controls spacing */
+            align-items: center;
+            gap: 8px;
         }
         .related-websites span {
             display: inline-block;
-            vertical-align: middle; /* Aligns separators with the text */
-            margin: 0 4px; /* Adds space around the separator */
+            vertical-align: middle;
+            margin: 0 4px;
         }
         .related-websites a {
             display: inline-flex;
-            align-items: center; /* Ensures icons align with text */
+            align-items: center;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         .related-websites a:hover {
-            color: #ffd700; /* Smooth hover effect */
+            color: #ffd700;
         }
         @media (min-width: 768px) {
             .related-websites span {
-                display: inline-block; /* Show the "|" separator on larger screens */
+                display: inline-block;
             }
+        }
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
@@ -105,82 +120,96 @@
 
 <header class="text-center">
     <div class="avatar mb-3">
-        <img src="public/jp-curves-222w.webp" alt="" class="" width="120" height="120">
+        <img src="public/jp-curves-222w.webp" alt="Jaret Pfluger" width="120" height="120">
     </div>
-    <h1 class="fw-bold">Jaret Pfluger</h1>
-    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-2">
-        <p class="mb-0 fw-medium">Enterprise Architect & Strategist</p>
-        <span class="d-none d-md-inline text-secondary">|</span>
-        <p class="mb-0 fw-medium">Certified in CGEIT, CISM, CIPT</p>
+    <h1 class="fw-bold text-uppercase" style="font-family: 'Roboto Slab', Georgia, serif; letter-spacing: 0.12em;">Jaret Pfluger</h1>
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mt-2" style="letter-spacing: 0.05em;">
+        <p class="mb-0 fw-medium text-uppercase small">Enterprise Architect & Strategist</p>
+        <span class="d-none d-md-inline text-white opacity-50">|</span>
+        <p class="mb-0 fw-medium text-uppercase small">CGEIT, CISM, CIPT</p>
     </div>
-    <hr class="mt-3 mb-3" style="max-width: 450px; margin: auto;">
-    <p class="mt-1 related-websites d-flex flex-wrap justify-content-center align-items-center gap-2">
-        <a href="https://einpost.com" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
-            <i class="bi bi-pencil me-1"></i>Einpost
+    
+    <div class="mt-3">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal" class="text-white text-decoration-none small opacity-75 text-uppercase d-inline-flex align-items-center" style="letter-spacing: 0.05em;">
+            Short Bio (Media/Events) <i class="bi bi-box-arrow-up-right ms-2"></i>
         </a>
-        <span class="text-secondary align-middle">|</span>
-        <a href="https://igorg.io" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
-            <i class="bi bi-globe me-1"></i>IGORG
+    </div>
+
+    <hr class="mt-3 mb-3" style="max-width: 450px; margin: auto; border-color: rgba(255,255,255,0.7);">
+
+    <p class="mt-1 related-websites d-flex flex-wrap justify-content-center align-items-center gap-4">
+        <a href="https://tigsus.com" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center" style="letter-spacing: 0.05em; font-size: 0.95rem;">
+            <i class="bi bi-briefcase me-2"></i>TIGSUS
         </a>
-        <span class="text-secondary align-middle">|</span>
-        <a href="https://lovefeeders.org" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
-            <i class="bi bi-heart-fill me-1"></i>LoveFeeders
+        <span class="text-secondary align-middle text-white opacity-50 d-none d-md-inline">|</span>
+        <a href="https://igorg.io" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center" style="letter-spacing: 0.05em; font-size: 0.95rem;">
+            <i class="bi bi-shield-lock me-2"></i>IGORG
         </a>
-        <span class="text-secondary align-middle">|</span>
-        <a href="https://tigsus.com" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center">
-            <i class="bi bi-briefcase me-1"></i>Tigsus
+        <span class="text-secondary align-middle text-white opacity-50 d-none d-md-inline">|</span>
+        <a href="https://lovefeeders.org" target="_blank" class="text-warning text-decoration-none d-inline-flex align-items-center" style="letter-spacing: 0.05em; font-size: 0.95rem;">
+            <i class="bi bi-heart-fill me-2"></i>LOVEFEEDERS
         </a>
     </p>
 </header>
 
-<section class="container text-center my-5">
-    <h3>About Me</h3>
-    <p>Hello! I’m Jaret Pfluger, the reporting hacker behind <a href="https://einpost.com" target="_blank" class="text-warning">Einpost</a>.</p>
-    <p>Some call me an author, a poet, even a bard. Some say I’m a saint; others, the devil himself. The truth is, I’m just a regular schlub trying to make sense of this world, one stumble at a time. Still, it would be nice to leave it better than I found it. For that, I’ll need a bit of wisdom.</p>
+<section class="container my-5">
+    <h3 class="text-center text-uppercase mb-4" style="letter-spacing: 0.1em;">About</h3>
+
+    <p class="about-text">
+        Look, if I had it my way, I’d choose the quiet life. A good meal, a sturdy table, a little order instead of the chaos outside the door. Sufficiency over excess. Gratitude over pride. But history shows life is struggle of choices. God gave you two hands. Use them to tidy things up. Of course, then there's always some empire-builder, some bloated machine looking to pave over the peace—and to what end? In the Western world, we’ve reached a point where the public trust between human beings has so thoroughly rotted out that we have to mathematically prove we aren't lying to each other—and even with the proof, the delusions persist. It’s a tragic reality of phone-first economics. This is a bitter season we’re forced to weather, which makes me appreciate the warm company of faces at my table that much more.
+    </p>
+
+    <p class="about-text">
+        So, as an enterprise architect, I build islands with high walls and strong gates. Zero-trust, deterministic infrastructure. I focus on federated data sovereignty—which is really just a structural guarantee that your digital life belongs to your community, governed by your local laws, rather than being sucked and sold by some faceless corporate monolith halfway across the world. I don't build this to force a worldview down anyone's throat. I build it to serve as a counterweight against the relentless hammering of the scaled modern machine. It preserves your right to make a localized choice, leaving you free to take responsibility for your own actions. Just as in nature, when a limb goes necrotic, you isolate it to save the whole. But once it heals, you welcome it back.
+    </p>
+
+    <p class="about-text">
+        The roadmap to this perspective wasn’t printed in any technical manual. It was built with a passport, too many airline miles, and a borderline-obsessive curiosity for the hard problems. I’ve spent a few decades bleeding in the trenches of ERP, networking, and cybersecurity — moving between America, China, Ukraine, Spain, small-town outfits, and Fortune 500s. I even rolled the dice on a Chinese fast-food startup once.
+    </p>
+
+    <p class="about-text">
+        Fast-forward to today, I never saw myself as the ISACA ILLOWA Chapter President, but somehow I ended up there. I also hosted the monthly EnergySec Cyber-Chats for a couple of years. And despite my doing almost nothing these days, the Multer Project — with its absurd 17 million weekly downloads — still keeps me on as Administrator Emeritus. Honored.
+    </p>
+
+    <p class="about-text">
+        But beyond the infrastructure, I write. Because a system, left to its own devices, is just cold mechanics. It answers the <em>what</em> and the <em>how</em>, but it doesn't have a soul. It remains entirely dead until the raw intent of the crafter bleeds into the design. Only then does the machine wake up, ceasing to be neutral, and amplifying whatever grace or malice the builder brought to the table across an entire community. And so I write—to puzzle out the fundamental, difficult human questions of <em>who</em> we are, and <em>why</em> we even bother to act in the first place.
+    </p>
 </section>
 
 <section class="container text-center my-5">
-    <h5>Other Links</h5>
+    <h5 class="text-uppercase mb-4" style="letter-spacing: 0.1em;">Published Work</h5>
     <div class="links">
-        <a href="https://amazon.com/author/jaretpfluger" target="_blank">Amazon Author Page</a> |
-        <a href="#" data-bs-toggle="modal" data-bs-target="#introNotesModal">Introduction Notes</a>
+        <a href="https://amazon.com/author/jaretpfluger" target="_blank">Amazon Author Page</a>
     </div>
 </section>
 
 <footer class="container text-center my-5">
-    <h5>Connect with Me</h5>
+    <hr style="max-width: 300px; margin: 0 auto 2rem auto;">
     <div class="d-flex justify-content-center social-icons">
         <a href="https://github.com/jpfluger" target="_blank"><i class="bi bi-github"></i></a>
-        <!--        <a href="https://facebook.com/yourfacebookpage" target="_blank"><i class="bi bi-facebook"></i></a>-->
         <a href="https://instagram.com/jaretpfluger" target="_blank"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.tiktok.com/@jaret.pfluger" target="_blank"><i class="bi bi-tiktok"></i></a>
-<!--        <a href="https://youtube.com/channel/yourchannelID" target="_blank"><i class="bi bi-youtube"></i></a>-->
-<!--        <a href="https://x.com/" target="_blank"><i class="bi bi-x-lg"></i></a>-->
-        <a href="mailto:postbox@einpost.com" class="email-icon"><i class="bi bi-envelope-fill"></i></a>
     </div>
-    <p class="text-muted mt-2">&copy; 2024 Jaret Pfluger. All rights reserved.</p>
+    <p class="text-muted mt-3">&copy; 2026 Jaret Pfluger. All rights reserved.</p>
 </footer>
 
-<!-- Modal -->
-<div class="modal fade" id="introNotesModal" tabindex="-1" aria-labelledby="introNotesModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
+<!-- Short Bio Modal -->
+<div class="modal fade" id="bioModal" tabindex="-1" aria-labelledby="bioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-start text-dark">
             <div class="modal-header">
-                <h5 class="modal-title" id="introNotesModalLabel">Introduction Notes</h5>
+                <h5 class="modal-title fs-6 text-uppercase" id="bioModalLabel" style="letter-spacing: 0.1em; font-family: 'Roboto Slab', Georgia, serif; font-weight: bold; margin-bottom: 0;">Speaker & Media Bio</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="line-height: 1.6; font-size: 0.95rem;">
                 <p><span class="text-muted">(When in doubt, use this for general use in programs or guides.)</span></p>
-                <p>Jaret Pfluger is a seasoned IT consultant with over 25 years of experience in enterprise governance, architecture, cybersecurity, and full-stack development. He has worked with Fortune 500 companies and smaller organizations, primarily in the energy sector. His international career includes living and working in China, Ukraine, and Spain. Jaret now resides in the U.S.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <p class="mb-0">
+                    Jaret Pfluger is an Enterprise Architect and IT/OT strategist with over 25 years of experience spanning enterprise governance, full-stack development, zero-trust infrastructure, and cybersecurity. Holding CGEIT, CISM, and CIPT certifications, he has guided information systems or cybersecurity strategy primarily for critical infrastructure organizations and small-to-medium enterprises, alongside occasional subcontracts for Fortune 500s. His career encompasses extensive international experience, having lived and operated as an independent contractor in China, Spain, and Ukraine. Jaret resides in the United States.
+                </p>
             </div>
         </div>
     </div>
 </div>
 
-<!--<script src="public/_third/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 <script src="public/bootstrap.bundle.min.js"></script>
 </body>
 </html>
